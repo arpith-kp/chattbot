@@ -28,6 +28,7 @@ DEBUG = True
 # See https://docs.djangoproject.com/en/2.1/ref/settings/
 ALLOWED_HOSTS = ['*']
 
+SECRET_KEY = 'dddddd'
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bridge.apps.BridgeConfig'
 ]
 
 MIDDLEWARE = [
@@ -106,9 +108,9 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1',
             'PORT': '3306',
-            'NAME': '[YOUR-DATABASE]',
-            'USER': '[YOUR-USERNAME]',
-            'PASSWORD': '[YOUR-PASSWORD]'
+            'NAME': 'hackathondb',
+            'USER': 'root',
+            'PASSWORD': 'root'
         }
     }
 # [END db_setup]
